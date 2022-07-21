@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holded Videoask</title>
+</head>
+<style>
+    body,
+    html {
+        height: 100%;
+        background-color: black;
+    }
+
+    .bg {
+        /* The image used */
+        background-image: url("./dashboard-dummy.png");
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<body>
+
+<div class="bg"></div>
+
+    <script src="https://www.videoask.com/embed/embed.js"></script>
+    <script>
+
+        var elena = "fohhemkym";
+        var hector = "fv2aqx1bd";
+        var videos = [elena, hector];
+        var video = videos[Math.floor(Math.random() * videos.length)];
+
+
+        var videoaskTrialWidget = function () {
+            window.videoask.loadEmbed({
+                "kind": "widget",
+                "url": "https://www.videoask.com/" + video + "#contact_name={{DataLayer Variable - user_full_name}}&contact_email={{DataLayer Variable - user_email}}",
+                "options": {
+                    "widgetType": "VideoThumbnailWindowTall",
+                    "backgroundColor": "#6095F8",
+                    "position": "bottom-left",
+                    "dismissible": true
+                }
+            })
+        }
+        window.onload = function () {
+            setTimeout(videoaskTrialWidget, 1000);
+            console.log("loaded");
+        }
+    </script>
+
+
+</body>
+
+</html>
+
+https://app.livestorm.co/holded/presentacion-del-software-holded?type=detailed&utm_source=videoask&utm_medium=popup&utm_campaign=daf6e139-2e3a-4c17-ba9d-104abf814f89&email=﻿Contact email﻿
